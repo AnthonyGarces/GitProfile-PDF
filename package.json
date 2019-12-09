@@ -1,0 +1,25 @@
+{
+  "name": "github-profile-package",
+  "version": "1.0.0",
+  "description": "Exists to take a github username and favorite color and make a colorful pdf with some of their information\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnthonyGarces/GitProfile-PDF.git"
+  },
+  "keywords": [
+    "Github",
+    "PDF",
+    "Inquirer",
+    "Axios"
+  ],
+  "author": "Esteban Garces",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnthonyGarces/GitProfile-PDF/issues"
+  },
+  "homepage": "https://github.com/AnthonyGarces/GitProfile-PDF#readme"
+}
