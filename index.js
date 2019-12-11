@@ -16,12 +16,6 @@ const questions = [
     
 ]
 
-function getStars(y) {
-    let stargazers = 0;
-    profile.data.forEach(y => stargazers += y.stargazers_count); 
-    console.log(stargazers)
-}
-
 inquirer
     .prompt(questions)
     .then(data => {
@@ -31,10 +25,14 @@ inquirer
         const queryUrlRepos = `https://api.github.com/users/${data.Username}/repos?per_page=100`;
         const queryUrlFollowers = `https://api.github.com/users/${data.Username}/followers?per_page=100`;
 
+        // axios
+        //     .get(queryUrlUser)
+        //     .then()
         axios
-            .get(queryUrlUser)
-            .then(profile => {
-                
-          
+            .get(queryUrlRepos)
+            .then(Repos => {
+                let stargazers = 0;
+                Repos.data.forEach(y => stargazers += y.stargazers_count); 
+                console.log(stargazers)
             })
     })
